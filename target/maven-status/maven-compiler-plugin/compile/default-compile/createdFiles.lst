@@ -1,0 +1,10 @@
+com\mychurch\items\Item.class
+com\mychurch\query\queryController.class
+com\mychurch\dbconnectors\DBConnecter.class
+com\mychurch\Database\SessionControl.class
+com\mychurch\items\ItemManager.class
+com\mychurch\user\Login.class
+com\mychurch\user\User.class
+com\mychurch\bin\Bin.class
+com\mychurch\bin\BinManager.class
+com\mychurch\dbconnectors\SQLiteQueryMaker.class

@@ -1,0 +1,86 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	width: 90%;
+	min-width:940px;
+	margin: 0 auto;
+}
+nav {
+	margin-top:5vh;
+	margin-bottom: 30px;
+	width:99.9%;
+	border: 1px solid #000000;
+	height: 30px;
+}
+nav ul{
+	margin:0px;
+	padding:5px 0px 5px 30px;
+}
+nav li{
+	display:inline;
+	margin-right: 40 px;
+}
+input.search{
+	width:60px;
+	height:20px;
+}
+
+.columnFullPage{
+	width: 99.9%;
+	height: 33.3vh;
+	float: left;
+	z-index:0;
+}
+.columnHalfPageLeft{
+	min-width: 460px;
+	width: 49.95%;
+	height: 33.3vh;
+	float: left;
+	z-index:4;
+}
+.columnHalfPageRight{
+	min-width: 460px;
+	width: 49.95%;
+	height: 33.3vh;
+	float: left;
+	
+	z-index:4;
+}
+div.column1{
+	width: 50%;
+	min-width: 230px;
+	height:90%;
+	float:left;
+}
+div.scrollingY{
+	overflow-y:scroll;
+}
+label{
+	font-weight:bold;
+	width: 150px;
+	float:left;
+	
+}
+input{
+	width: 125px;
+}
+table.results{
+	min-width:100%;
+	empty-cells: show;
+	border: 1px solid #000000;
+	border-collapse:collapse;
+}
+tr{
+	border: 1px solid #000000;
+}
+
+thead.header{
+	width:100%;
+}
+th, td{
+	text-align:left;
+	min-width:60px;
+	max-width:15%;
+	padding: 7px 10px 10px 10px;
+	border: 2px solid #000000;
+}

@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#content {
+	overflow: auto
+}
+
+#nav, #feature, #footer {
+	margin: 1%;
+}
+
+.row {
+	width: 99.9%;
+	height: 33.3%;
+}
+
+.column1, .column2, .column3 {
+	width: 33.3%;
+	height: 33.3vh;
+	float: left;
+}
+
+img {
+	display: block;
+	margin: auto auto;
+	width: 50%;
+}
+
+.title {
+	float: left;
+	width: 25%;
+	text-align: right;
+	padding-right: 15px;
+}
+
+.submit {
+	text-align: right;
+}

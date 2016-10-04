@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="CSS/InterfaceLayout.css" type="text/css" rel="stylesheet" />
+<title>Inventory Manager</title>
+</head>
+<body>
+	<div id="tabs">
+	<div>
+		<nav>
+			<ul>
+				<li><a href="#searchTab">Search</a></li>
+				<li><a href="#addNewTab">New</a></li>
+				<li><a href="#queryTab">Query</a></li>
+				<li><a href="#deleteTab">Delete</a></li>
+			</ul>
+		</nav>
+	</div>
+		<div id="searchTab">
+			<div class="columnFullPage">
+				<form id="searchInv">
+					<div class="columnHalfPageLeft">
+						<div>
+							<label for="searchItemID">ID:</label> <input id="searchItemID" type="number"></input>
+						</div>
+						<div>
+							<label for="searchItemLength">Length:</label> <input id="searchItemLength" type="number"></input>
+						</div>
+						<div>
+							<label for="searchItemModelNumber">Model Number:</label> <input id="searchItemModelNumber" type="text"></input>
+						</div>
+						<div>
+							<label for="searchItemDepartment">Department:</label> <select id="searchItemDepartment">
+								<option value=""></option>
+								<option value="Video">Video</option>
+								<option value="Audio">Audio</option>
+								<option value="Lighting">Lighting</option>
+							</select>
+						</div>
+						<div>
+							<label for="searchItemBin">Bin:</label> <select id="searchItemBin"></select>
+
+						</div>
+
+						<div>
+							<label for="searchItemDescription">Description:</label> <input id="searchItemDescription"
+								type="text"></input>
+						</div>
+						<div>
+							<label for="searchItemDimensions">Dimensions:</label> <input id="searchItemDimensions"
+								type="text"></input>
+						</div>
+					</div>
+					<div class="columnHalfPageRight">
+						<div>
+							<label for="searchItemReplacementCost">Replacement Cost:</label> <input
+								id="searchItemReplacementCost" type="number" step="any"></input>
+						</div>
+						<div>
+							<label for="searchItemPrice">Price:</label> <input id="searchItemPrice" type="number"
+								step="any"></input>
+						</div>
+						<div>
+							<label for="searchItemWeight">Weight:</label> <input id="searchItemWeight" type="number"
+								step="any"></input>
+						</div>
+						<div>
+							<label for="searchItemPurchaseDate">Purchase Date:</label> <input id="searchItemPurchaseDate" type="date"
+								></input>
+						</div>
+						<div>
+							<label for="searchItemWarrantyEndDate">Warranty End Date:</label> <input id="searchItemWarrantyEndDate" type="date"
+								></input>
+						</div>
+						<div>
+							<label for="searchItemCategory">Category:</label> <input id="searchItemCategory" type="text"
+								></input>
+						</div>
+						<div>
+							<input class="search" type="submit" value="Search" />
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="columnFullPage scrollingY">
+				<table class="results " id="results">
+					<thead class="header" id="FirstRow">
+						<tr>
+							<th>Id</th>
+							<th>Bin</th>
+							<th>Department</th>
+							<th>Model Number</th>
+							<th>Description</th>
+							<th>Price</th>
+							<th>Replacement Cost</th>
+							<th>Purchase Date</th>
+							<th>Warranty End Date</th>
+							<th>Weight</th>
+							<th>Dimensions</th>
+							<th>Length</th>
+							<th>Category</th>
+						</tr>
+					</thead>
+					<tbody class="tablebody" id="tablebody">
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="addNewTab">
+			<div class="columnHalfPageLeft">
+				<form id="addNewItemForm">
+						<div>
+							<label for="newItemDepartment">Department:</label> 
+							<select id="newItemDepartment">
+								<option value="Video">Video</option>
+								<option value="Audio">Audio</option>
+								<option value="Lighting">Lighting</option>
+							</select>
+						</div>
+						<div>
+							<label for="newItemBin">Bin:</label> <select id="newItemBin"></select>
+						</div>
+						<div>
+							<label for="newItemModelNumber">Model Number:</label> <input id="newItemModelNumber" type="text"></input>
+						</div>
+						<div>
+							<label for="newItemLength">Length:</label> <input id="newItemLength" type="number"></input>
+						</div>
+						<div>
+							<label for="newItemDescription">Description:</label> <input id="newItemDescription" required="required" type="text"></input>
+						</div>
+						<div>
+							<label for="newItemDimensions">Dimensions:</label> <input id="newItemDimensions" type="text"></input>
+						</div>
+						<div>
+							<label for="newItemReplacementCost">Replacement Cost:</label> <input	id="newItemReplacementCost" type="number" step="any"  required="required" ></input>
+						</div>
+						<div>
+							<label for="newItemPrice">Price:</label> <input id="newItemPrice" type="number" required="required" 
+								step="any"></input>
+						</div>
+						<div>
+							<label for="newItemWeight">Weight:</label> <input id="newItemWeight" type="number" step="any"></input>
+						</div>
+						<div>
+							<label for="newItemPurchaseDate">Purchase Date:</label> <input id="newItemPurchaseDate" type="date"
+								></input>
+						</div>
+						<div>
+							<label for="newItemWarrantyEndDate">Warranty End Date:</label> <input id="newItemWarrantyEndDate" type="date"
+								></input>
+						</div>
+						<div>
+							<label for="newItemCategory">Category:</label> <input id="newItemCategory" type="text"
+								></input>
+						</div>
+						<div>
+							<input class="Add" type="submit" value="Add" />
+						</div>
+				</form>
+			</div>
+		</div>
+		<div id="queryTab">				
+			<form id="queryForm">
+				<div>
+					<label for="symbol">Symbol:</label> 
+						<select id="symbol">
+								<option value="=">=</option>
+								<option value="&lt;">&lt;</option>
+								<option value="&gt;">&gt;</option>
+								<option value="&lt;=">&lt;=</option>
+								<option value="&gt;=">&gt;=</option>
+								<option value="&lt;&gt;">!=</option>
+						</select>
+						<label for="function">Function:</label> 
+						<select id="function">
+								<option value="Sum">Sum</option>
+								<option value="Count">Count</option>
+								<option value="Max">Max</option>
+								<option value="Min">Min</option>
+								<option value="Avg">Avg</option>
+						</select>
+						<p>This is not yet implemented</p>
+				</div>
+			</form>
+		</div>
+		<div id="deleteTab">
+			<div  class="columnHalfPageLeft">
+				<label for="deleteItemID">ID:</label> <input id="deleteItemID" type="number" onchange="onchangeDeleteId(this.value)"></input>
+			</div>
+			<div class="columnHalfPageRight">
+			<form id="deleteItemForm">
+			<div>
+				<div>
+					<label>Bin:</label><label id="deleteItemBin"></label>
+				</div>
+				<div>
+					<label>Model Number:</label><label id="deleteItemModelNumber"></label>
+				</div>
+				<div>
+					<label>Department:</label><label id="deleteItemDepartment"></label>
+				</div>
+				<div>
+					<label>Description:</label><label id="deleteItemDescription"></label>
+				</div>
+				<div>
+					<label>Price:</label><label id="deleteItemPrice"></label>
+				</div>
+				<div>
+					<label>Replacement Cost:</label><label id="deleteItemReplacementCost"></label>
+				</div>
+				</div>
+				<div>
+				<div>
+					<label>Purchase Date:</label><label id="deleteItemPurchase"></label>
+				</div>
+				<div>
+					<label>Warranty End Date:</label><label id="deleteItemWarrantyEndDate"></label>
+				</div>
+				<div>
+					<label>Length:</label><label id="deleteItemLength"></label>
+				</div>
+				<div>
+					<label>Dimension:</label><label id="deleteItemDimension"></label>
+				</div>
+				<div>
+					<label>Weight:</label><label id="deleteItemWeight"></label>
+				</div>
+				<div>
+					<label>Category:</label><label id="deleteItemCategory"></label>
+				</div>
+				</div>
+				<input class="deleted" type="submit" value="Confirm Deletion" />
+			</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script src="js/supportingFunctions.js"></script>
+	<script>
+		addOptionForBinSelect("searchItemBin");
+		addOptionForBinSelect("newItemBin");
+		getAllItems();
+		$(function(){
+			$('#tabs').tabs();
+		});
+	</script>
+</body>
+</html>
